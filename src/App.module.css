@@ -1,0 +1,162 @@
+
+
+/* ── Shell ── */
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ── Main content area ── */
+.main {
+  margin-left: 340px;
+  flex: 1;
+  padding: 36px 48px 64px;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* ── Available balance row ── */
+.balanceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.balanceLabel {
+  font-size: 13px;
+  color: #aaaaaa;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.balanceAmount {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.balanceBadge {
+  background: #01D167;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
+.balanceValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222222;
+}
+
+/* ── New card button ── */
+.btnNewCard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #325BAF;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btnNewCard:hover {
+  background: #264d9c;
+  transform: translateY(-1px);
+}
+
+.btnNewCard:focus-visible {
+  outline: 2px solid #325BAF;
+  outline-offset: 3px;
+}
+
+/* ── Tab bar ── */
+.tabBar {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 0;
+  gap: 0;
+}
+
+.tab {
+  padding: 10px 0;
+  margin-right: 32px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #aaaaaa;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: none;
+  font-family: inherit;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.tab:hover:not(.tabActive) {
+  color: #555555;
+}
+
+.tabActive {
+  color: #222222;
+  border-bottom-color: #01D167;
+}
+
+/* ── Grey card panel wrapper ── */
+.cardPanel {
+  background: #ffffff;
+  border-radius: 0 0 16px 16px;
+  padding: 28px 28px 28px;
+  border-top: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Content grid ── */
+.contentGrid {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.panelLeft {
+  flex: 0 0 400px;
+  min-width: 0;
+}
+
+.panelRight {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .main {
+    padding: 28px 28px 48px;
+  }
+  .cardPanel {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    margin-left: 0;
+    padding: 20px 16px 48px;
+  }
+  .contentGrid {
+    flex-direction: column;
+  }
+  .panelLeft {
+    flex: none;
+    width: 100%;
+  }
+}

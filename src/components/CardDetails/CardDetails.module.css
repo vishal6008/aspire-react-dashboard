@@ -1,0 +1,184 @@
+.section {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ── Accordion header rows ── */
+.accordionRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: background 0.18s ease;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width: 100%;
+  font-family: inherit;
+  text-align: left;
+}
+
+.accordionRow:last-of-type {
+  border-bottom: none;
+}
+
+.accordionRow:hover {
+  background: #fafafa;
+}
+
+.accordionRow:focus-visible {
+  outline: 2px solid #01D167;
+  outline-offset: -2px;
+}
+
+.iconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #EDF3FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rowLabel {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0C365A;
+}
+
+.chevron {
+  color: #aaaaaa;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+  transform: rotate(90deg);
+}
+
+/* ── Expanded transaction panel ── */
+.txnPanel {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+}
+
+/* ── Transaction row ── */
+.txnRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: background 0.15s ease;
+}
+
+.txnRow:hover {
+  background: #fafafa;
+}
+
+/* ── Category icon bubble ── */
+.txnIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconPurple { background: #EDE8FF; }
+.iconBlue   { background: #E0F0FF; }
+.iconRed    { background: #FFE8E8; }
+.iconGreen  { background: #E5FAF0; }
+
+.txnIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ── Merchant info ── */
+.txnInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.txnMerchant {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0C365A;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.txnDate {
+  font-size: 12px;
+  color: #aaaaaa;
+  margin-top: 3px;
+}
+
+.txnTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #EDF3FF;
+  color: #0E4D7B;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-top: 7px;
+}
+
+.txnTag svg {
+  flex-shrink: 0;
+}
+
+/* ── Amount ── */
+.txnAmount {
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.txnDebit  { color: #0C365A; }
+.txnCredit { color: #01D167; }
+
+/* ── View all footer ── */
+.viewAll {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  color: #01D167;
+  font-size: 14px;
+  font-weight: 700;
+  background: none;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+
+.viewAll:hover {
+  background: #f5fff9;
+}
+
+/* ── Empty state ── */
+.txnEmpty {
+  padding: 28px 20px;
+  text-align: center;
+  color: #aaaaaa;
+  font-size: 14px;
+}

@@ -1,0 +1,68 @@
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #EDF3FF;
+  border-radius: 12px;
+  padding: 20px 12px 18px;
+  margin-top: 20px;
+}
+
+.actionBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 2px 8px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  min-width: 56px;
+}
+
+.actionBtn:hover {
+  transform: translateY(-2px);
+}
+
+.actionBtn:focus-visible {
+  outline: 2px solid #325BAF;
+  outline-offset: 2px;
+}
+
+/* Dark navy circular icon background */
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.actionBtn:hover .iconWrapper {
+  background: #264d9c;
+}
+
+/* Active (freeze pressed) */
+/* .actionBtnActive .iconWrapper {
+  box-shadow: 0 0 0 3px rgba(106, 138, 201, 0.25);
+} */
+
+.iconWrapper svg {
+  width: 20px;
+  height: 20px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #0C365A;
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.4;
+}

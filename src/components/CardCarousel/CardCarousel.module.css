@@ -1,0 +1,195 @@
+.wrapper {
+  position: relative;
+  margin-bottom: 0;
+}
+
+/* ── Show card number toggle ── */
+.showNumberRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.showNumberBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #01D167;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 0;
+  transition: opacity 0.15s ease;
+}
+.showNumberBtn:hover { opacity: 0.75; }
+
+/* ── Scrollable track ── */
+.track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+.track::-webkit-scrollbar { display: none; }
+
+/* ── Individual card ── */
+.card {
+  flex-shrink: 0;
+  width: 380px;
+  height: 220px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #01D167 0%, #01a050 100%);
+  padding: 20px 24px 22px;
+  position: relative;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+  margin-right: 24px;
+  /* box-shadow: 0 8px 24px rgba(1, 180, 90, 0.22); */
+}
+
+/* Decorative circle overlays */
+.card::before {
+  content: '';
+  position: absolute;
+  right: -55px; top: -55px;
+  width: 230px; height: 230px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+.card::after {
+  content: '';
+  position: absolute;
+  right: 20px; bottom: -85px;
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  pointer-events: none;
+}
+
+/* Frozen state */
+.cardFrozen {
+  filter: saturate(0) brightness(0.75);
+  opacity: 0.7;
+}
+
+.frozenBadge {
+  position: absolute;
+  top: 14px; left: 14px;
+  background: rgba(0,0,0,0.42);
+  color: #ffffff;
+  font-size: 10px; font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+/* Card top – aspire logo right-aligned */
+.cardTop {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.aspireLogoWrap {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.aspireText {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Name */
+.cardName {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+/* Number */
+.cardNumber {
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-family: 'Courier New', monospace;
+  position: relative;
+  z-index: 1;
+}
+
+/* Bottom row */
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.cardMeta {
+  display: flex;
+  gap: 18px;
+}
+
+.cardMetaItem {
+  color: rgba(255,255,255,0.8);
+  font-size: 12px;
+  font-weight: 400;
+}
+.cardMetaItem strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* VISA */
+.visaText {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 900;
+  font-style: italic;
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 1px;
+}
+
+/* ── Dot indicators ── */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 14px 0 4px;
+}
+
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.15);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.dot:hover { background: rgba(0,0,0,0.28); }
+.dotActive {
+  background: #01D167 !important;
+  transform: scale(1.3);
+}
