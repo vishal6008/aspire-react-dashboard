@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
 import { useCardStore } from './store/useCardStore';
-
 import Sidebar      from './components/Sidebar/Sidebar';
 import CardCarousel from './components/CardCarousel/CardCarousel';
 import CardActions  from './components/CardActions/CardActions';
 import CardDetails  from './components/CardDetails/Carddetails';
 import Modal        from './components/AddCardModal/AddCardModal';
 import Toast        from './components/Toast/ToastContainer';
-import { IconPlus } from './assets/icons';
-
+import IconPlus from './assets/icon_plus.svg';
 import styles from './App.module.css';
 
 const App: React.FC = () => {
@@ -25,7 +23,7 @@ const App: React.FC = () => {
       <main className={styles.main}>
         {/* ── Available balance ── */}
         <div className={styles.balanceRow}>
-          <div>
+          <div className={styles.balanceInfo}>
             <div className={styles.balanceLabel}>Available balance</div>
             <div className={styles.balanceAmount}>
               <span className={styles.balanceBadge}>S$</span>
@@ -33,7 +31,7 @@ const App: React.FC = () => {
             </div>
           </div>
           <button className={styles.btnNewCard} onClick={openModal}>
-            <IconPlus size={16} color="#ffffff" />
+            <img src={IconPlus} alt="IconPlus logo" />
             New card
           </button>
         </div>

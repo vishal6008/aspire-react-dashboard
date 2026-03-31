@@ -32,7 +32,6 @@
   outline-offset: 2px;
 }
 
-/* Dark navy circular icon background */
 .iconWrapper {
   width: 48px;
   height: 48px;
@@ -48,11 +47,6 @@
   background: #264d9c;
 }
 
-/* Active (freeze pressed) */
-/* .actionBtnActive .iconWrapper {
-  box-shadow: 0 0 0 3px rgba(106, 138, 201, 0.25);
-} */
-
 .iconWrapper svg {
   width: 20px;
   height: 20px;
@@ -65,4 +59,28 @@
   text-align: center;
   white-space: pre-line;
   line-height: 1.4;
+}
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  .actions { padding: 18px 8px 16px; }
+  .iconWrapper { width: 44px; height: 44px; }
+  .iconWrapper svg { width: 18px; height: 18px; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .actions { padding: 16px 8px 14px; gap: 0; }
+  .actionBtn { gap: 8px; padding: 0 2px; }
+  .iconWrapper { width: 42px; height: 42px; }
+  .iconWrapper svg { width: 17px; height: 17px; }
+  .label { font-size: 10.5px; }
+}
+
+/* ── Small mobile ── */
+@media (max-width: 400px) {
+  .actions { padding: 14px 4px 12px; }
+  .iconWrapper { width: 36px; height: 36px; }
+  .iconWrapper svg { width: 15px; height: 15px; }
+  .label { font-size: 9.5px; }
 }

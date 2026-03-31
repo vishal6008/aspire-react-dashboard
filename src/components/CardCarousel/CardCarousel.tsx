@@ -35,12 +35,8 @@ const CardSlide: React.FC<CardSlideProps> = ({ card, showNumber }) => {
     >
       {card.frozen && <span className={styles.frozenBadge}>Frozen</span>}
 
-      {/* Top: aspire logo (top-right) */}
       <div className={styles.cardTop}>
         <div className={styles.aspireLogoWrap}>
-          {/* <svg width="20" height="20" viewBox="0 0 36 36" fill="none">
-            <path d="M6 10 L18 22 L30 10" stroke="white" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg> */}
           <IconHome />
           <span className={styles.aspireText}>aspire</span>
         </div>
@@ -58,7 +54,7 @@ const CardSlide: React.FC<CardSlideProps> = ({ card, showNumber }) => {
           <span className={styles.cardMetaItem}>Thru: <strong>{card.expiry}</strong></span>
           <span className={styles.cardMetaItem}>CVV: <strong>★ ★ ★</strong></span>
         </div>
-        <span className={styles.visaText}><img src={IconVisa} alt="Aspire logo" /></span>
+        <span className={styles.visaText}><img src={IconVisa} alt="IconVisa logo" /></span>
       </div>
     </div>
   );

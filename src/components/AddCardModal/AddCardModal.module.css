@@ -137,3 +137,23 @@
   cursor: not-allowed;
   transform: none;
 }
+
+/* ════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════ */
+@media (max-width: 480px) {
+  .modal {
+    padding: 28px 20px;
+    border-radius: 16px 16px 0 0;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    width: 100%;
+    max-width: 100%;
+    animation: slideUpMobile 0.25s ease;
+  }
+  .overlay { align-items: flex-end; padding: 0; }
+  @keyframes slideUpMobile {
+    from { transform: translateY(100%); }
+    to   { transform: translateY(0); }
+  }
+}

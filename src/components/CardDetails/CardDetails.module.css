@@ -4,7 +4,6 @@
   overflow: hidden;
 }
 
-/* ── Accordion header rows ── */
 .accordionRow {
   display: flex;
   align-items: center;
@@ -13,7 +12,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   cursor: pointer;
   transition: background 0.18s ease;
-  background: none;
+  background: #F5F9FF;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -61,16 +60,14 @@
 }
 
 .chevronOpen {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 
-/* ── Expanded transaction panel ── */
 .txnPanel {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   background: #ffffff;
 }
 
-/* ── Transaction row ── */
 .txnRow {
   display: flex;
   align-items: center;
@@ -84,7 +81,6 @@
   background: #fafafa;
 }
 
-/* ── Category icon bubble ── */
 .txnIcon {
   width: 48px;
   height: 48px;
@@ -105,7 +101,6 @@
   height: 22px;
 }
 
-/* ── Merchant info ── */
 .txnInfo {
   flex: 1;
   min-width: 0;
@@ -143,7 +138,6 @@
   flex-shrink: 0;
 }
 
-/* ── Amount ── */
 .txnAmount {
   font-size: 15px;
   font-weight: 700;
@@ -154,7 +148,6 @@
 .txnDebit  { color: #0C365A; }
 .txnCredit { color: #01D167; }
 
-/* ── View all footer ── */
 .viewAll {
   display: block;
   width: 100%;
@@ -175,10 +168,18 @@
   background: #f5fff9;
 }
 
-/* ── Empty state ── */
 .txnEmpty {
   padding: 28px 20px;
   text-align: center;
   color: #aaaaaa;
   font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .accordionRow { padding: 14px 16px; gap: 12px; }
+  .txnRow { padding: 14px 16px; gap: 10px; }
+  .txnIcon { width: 38px; height: 38px; }
+  .txnMerchant { font-size: 13px; }
+  .txnAmount { font-size: 13px; }
+  .txnTag { font-size: 10px; padding: 2px 8px; }
 }

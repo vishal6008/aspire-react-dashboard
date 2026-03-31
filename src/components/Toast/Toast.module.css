@@ -78,3 +78,13 @@
   from { opacity: 1; transform: translateX(0); }
   to   { opacity: 0; transform: translateY(-6px); }
 }
+ 
+@media (max-width: 480px) {
+  .container {
+    top: auto;
+    bottom: 74px; /* above mobile nav */
+    right: 12px; left: 12px;
+  }
+  .toast { min-width: unset; max-width: 100%; }
+}
+ 

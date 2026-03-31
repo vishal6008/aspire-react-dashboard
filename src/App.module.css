@@ -1,12 +1,8 @@
-
-
-/* ── Shell ── */
 .shell {
   display: flex;
   min-height: 100vh;
 }
 
-/* ── Main content area ── */
 .main {
   margin-left: 340px;
   flex: 1;
@@ -15,7 +11,6 @@
   min-height: 100vh;
 }
 
-/* ── Available balance row ── */
 .balanceRow {
   display: flex;
   justify-content: space-between;
@@ -52,7 +47,6 @@
   color: #222222;
 }
 
-/* ── New card button ── */
 .btnNewCard {
   display: flex;
   align-items: center;
@@ -79,7 +73,6 @@
   outline-offset: 3px;
 }
 
-/* ── Tab bar ── */
 .tabBar {
   display: flex;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -111,7 +104,6 @@
   border-bottom-color: #01D167;
 }
 
-/* ── Grey card panel wrapper ── */
 .cardPanel {
   background: #ffffff;
   border-radius: 0 0 16px 16px;
@@ -120,7 +112,6 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* ── Content grid ── */
 .contentGrid {
   display: flex;
   gap: 32px;
@@ -137,26 +128,54 @@
   min-width: 0;
 }
 
-/* ── Responsive ── */
-@media (max-width: 1100px) {
-  .main {
-    padding: 28px 28px 48px;
-  }
-  .cardPanel {
-    padding: 20px;
-  }
+
+/* ════════════════════════════════════
+   TABLET  ≤ 1024px
+════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .main { padding: 28px 28px 48px; }
+  .panelLeft { flex: 0 0 360px; }
+  .cardPanel { padding: 20px; }
 }
 
-@media (max-width: 900px) {
+/* ════════════════════════════════════
+   MOBILE  ≤ 768px
+════════════════════════════════════ */
+@media (max-width: 768px) {
   .main {
     margin-left: 0;
-    padding: 20px 16px 48px;
+    padding: 20px 16px 88px;
   }
-  .contentGrid {
-    flex-direction: column;
+  .cardPanel { padding: 16px 12px; }
+  .contentGrid { flex-direction: column; gap: 20px; }
+  .panelLeft  { flex: none; width: 100%; }
+  .panelRight { width: 100%; }
+}
+
+/* ════════════════════════════════════
+   SMALL MOBILE  ≤ 480px
+════════════════════════════════════ */
+@media (max-width: 480px) {
+  .main { padding: 16px 12px 84px; }
+
+  .balanceRow { gap: 10px; align-items: center; }
+  .balanceValue { font-size: 22px; }
+
+  /* Make new card button icon-only on very small screens */
+  .btnNewCard {
+    padding: 9px 12px;
+    font-size: 12px;
+    gap: 6px;
   }
-  .panelLeft {
-    flex: none;
-    width: 100%;
-  }
+
+  .tab { margin-right: 20px; font-size: 13px; }
+  .cardPanel { padding: 12px 10px; }
+}
+
+/* ════════════════════════════════════
+   EXTRA SMALL  ≤ 360px
+════════════════════════════════════ */
+@media (max-width: 360px) {
+  .btnNewCard { padding: 8px 10px; font-size: 11px; }
+  .balanceValue { font-size: 20px; }
 }

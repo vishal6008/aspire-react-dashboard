@@ -3,9 +3,6 @@ import type { Transaction, TransactionCategory } from '../../types';
 import { useTransactions } from '../../hooks/useTransactions';
 import { formatCurrency } from '../../utils';
 import {
-  IconCardDetail,
-  IconTransactions,
-  IconChevronRight,
   IconShopping,
   IconTravel,
   IconFood,
@@ -13,8 +10,9 @@ import {
   IconCardSmall,
 } from '../../assets/icons';
 import styles from './CardDetails.module.css';
-
-// ─── Transaction helpers (same as TransactionList) ────────────────────────────
+import IconCardDetail from '../../assets/group_10889.svg';
+import IconTransactions from '../../assets/group_11889.svg';
+import IconChevronDown from '../../assets/down-arrow.svg';
 
 const CATEGORY_ICON: Record<TransactionCategory, React.ReactNode> = {
   shopping: <IconShopping />,
@@ -72,10 +70,10 @@ const CardDetails: React.FC = () => {
         onClick={() => toggle('details')}
         aria-expanded={expanded === 'details'}
       >
-        <div className={styles.iconWrap}><IconCardDetail /></div>
+        <div className={styles.iconWrap}><img src={IconCardDetail} alt="IconCardDetail logo" /></div>
         <span className={styles.rowLabel}>Card details</span>
         <span className={`${styles.chevron} ${expanded === 'details' ? styles.chevronOpen : ''}`}>
-          <IconChevronRight />
+          <img src={IconChevronDown} alt="IconChevronDown logo" />
         </span>
       </button>
 
@@ -85,10 +83,10 @@ const CardDetails: React.FC = () => {
         onClick={() => toggle('transactions')}
         aria-expanded={expanded === 'transactions'}
       >
-        <div className={styles.iconWrap}><IconTransactions /></div>
+        <div className={styles.iconWrap}><img src={IconTransactions} alt="IconTransactions logo" /></div>
         <span className={styles.rowLabel}>Recent transactions</span>
         <span className={`${styles.chevron} ${expanded === 'transactions' ? styles.chevronOpen : ''}`}>
-          <IconChevronRight />
+          <img src={IconChevronDown} alt="IconChevronDown logo" />
         </span>
       </button>
 
