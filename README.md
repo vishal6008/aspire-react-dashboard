@@ -6,7 +6,7 @@ A React + TypeScript implementation of an Aspire-inspired card management dashbo
 
 Hosted version of the project:
 
-https://aspire-dashboard-rho.vercel.app/
+https://aspire-react-dashboard.vercel.app/
 
 ---
 
